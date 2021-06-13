@@ -30,9 +30,9 @@ If you have questions concerning this license or the applicable additional terms
 #include "../../idlib/precompiled.h"
 
 #include "win_local.h"
-#include <lmerr.h>
-#include <lmcons.h>
-#include <lmwksta.h>
+//#include <lmerr.h>
+//#include <lmcons.h>
+//#include <lmwksta.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <direct.h>
