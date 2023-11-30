@@ -67,11 +67,11 @@ void idLobbyBackendDirect::StartFinding( const idMatchParameters & p, int numPar
 	isLocal = MatchTypeIsLocal( p.matchFlags );
 	isHost	= false;
 
-	if ( lobbyToSessionCB->CanJoinLocalHost() ) {
+	//if ( lobbyToSessionCB->CanJoinLocalHost() ) {
 		state = STATE_READY;
-	} else {
+	/*} else {
 		state = STATE_FAILED;
-	}
+	}*/
 }
 
 /*
@@ -81,6 +81,10 @@ idLobbyBackendDirect::GetSearchResults
 */
 void idLobbyBackendDirect::GetSearchResults( idList< lobbyConnectInfo_t > & searchResults ) {
 	lobbyConnectInfo_t fakeResult;
+	
+	Sys_StringToNetAdr("192.168.1.204", &fakeResult.netAddr, true);
+	fakeResult.netAddr.port = net_port.GetInteger();
+
 	searchResults.Clear();
 	searchResults.Append( fakeResult );
 }
