@@ -35,7 +35,11 @@ If you have questions concerning this license or the applicable additional terms
 #include <direct.h>
 #include <io.h>
 #include <conio.h>
+#pragma push_macro("WIN_NOEXCEPT")
+#undef WIN_NOEXCEPT
+#define WIN_NOEXCEPT
 #include <mapi.h>
+#pragma pop_macro("WIN_NOEXCEPT")
 #include <ShellAPI.h>
 #include <Shlobj.h>
 
